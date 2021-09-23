@@ -1,0 +1,20 @@
+server:
+  port: 8401
+spring:
+  application:
+    name: cloudali-sentinel-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.1.11:8848
+    sentinel:
+      transport:
+#        dashboard: 192.168.1.11:8080
+#        clientIp: localhost
+        port: 8719
+        dashboard: localhost:8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

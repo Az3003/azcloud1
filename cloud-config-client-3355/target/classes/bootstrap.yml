@@ -1,0 +1,16 @@
+server:
+  port: 3355
+spring:
+  application:
+    name: config-client
+  cloud:
+    zookeeper:
+      connect-string: 192.168.1.11:2181
+    config:
+      label: main
+      name: config
+      profile: dev
+      uri: http://localhost:3344
+#    cn.az.springcloud.alibaba.service-registry:
+#      auto-registration:
+#        enabled: off

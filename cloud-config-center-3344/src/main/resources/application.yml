@@ -1,0 +1,48 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    zookeeper:
+      connect-string: 192.168.1.11:2181
+    config:
+      server:
+        git:
+          uri: https://github.com/Az3003/springcloud-config.git
+          search-paths:
+            - springcloud-config
+          clone-on-start: true
+          force-pull: true
+          skip-ssl-validation: true
+          default-label: main
+          ignore-local-ssh-settings: true
+          host-key: az3003@163.com
+          host-key-algorithm: ssh-rsa
+          private-key: |
+            MIIEpAIBAAKCAQEA00/wihHUwOkRE6ezHt+mmgQBxD3JRqhqad+CQbhy1tboHZ7u
+            P7wA6VbN6aC1HjBtERunQzRz5FQZwAF2tWo9bcXEp2F2sfKz7oyCBNCyxtmtd+Xg
+            sXl5FX8X3T4FwSw8IYnwR8eUZgKOw7zbd4fCqzSghrSxhsZkaD4kbKju9LSjM9lo
+            32E5livjxz4+ZhA9BFerkHCN+HXM0jfL45+m63ndfAsbJf21FBrlY60FjeIilWIl
+            YPRtBbyMy0ANGELeyZCRl1X/tfxBVr/G5gjW1mUqJsxDPAx9ElaHO3K8Xuoy1rnN
+            GAqg1DLoHHSsMarerTVQI4jPuAd3KnceaDpzrwIDAQABAoIBAEXDvbGH44rxJ78q
+            fbuysSlmK0Mj9wDJ96AOt82E3P1LJIUrBJOsOUzQaNk6QrG94TRlwdoxRhXbIkk+
+            8ndApRlJ0vxD9FEZxQf8Aa0fTfbSxS+xiHZvmWdcd3+Gy5WUSiH0jYzVOoxXSdUb
+            1AVpn/6wOFNg8r+BXoMACTyKpaHKK1ZFP+55b63PCbLXz8dOJ4b3mPJCzKyF2yAQ
+            Cvg+Hszxd1+vq2Dp1bUfkI36EUE3LeYN6PaafyDKodm/pD+8n9FgxGnB3++ly78e
+            xfNnwiqw12Gju9s8Ppg/CKVYWtTcRxKNpRCoBaf9y9kKAqqjQxDWDPpl2WyCya8w
+            oetVvVkCgYEA/8BZht137fLPr2Z3GyplCSsl25nV9DLgO/OTOubVnS81/2EJ8WZs
+            elz/Gas6xxe9dqP9kD+BbrkUSRIquxzVkHWIuKQGoZDCAornQe77d2tzATUoqoRh
+            aB74MNUbqY+8dDWd5P29aa7v80qT2sL5ESHn2CSjKsRqRmlzd5EGnOsCgYEA04SH
+            s30rHN1u1VYZiYoW3C/P6DIw1sKDesTuSeBSRDHMAoh7T8Sj+Z5ObUxMWD06arBh
+            b2TG/SwKWkT8Zyf8eTGtOFGRoNV5VqZVYJSwGPqg7GVfzrqf/2ZIADC7MLSFVaxg
+            QyGi3E1vrn6uH4x2siETx7Yrm0rzyJO+LOSTg00CgYBJKoEySRevVkC+QEUg228O
+            QW7SNV91PjzSSeu79R/1mPUMu3k5u4CbPRGqCUeGf68vStkWtGRWBdLc2LqqzyP1
+            8PoNQLe47w3h5lUkkrcUQgQju06IAdlQDVQZvE3uo3VZlaE3SrQukOKKqrJD6nWQ
+            xi9qsYiQiqKQxEhJU48dwwKBgQDPX6cfvX8QTLTGKiTdaOpis+mVT+f8FjaLnhm1
+            il19iIjojuC+4x6Us7VWiTBsbpMgWI8ehGJngs8fk3UWuehY9fBLQAWT9teAsZER
+            IJXJ16cAPZ+B8gy9fIzoyt4rsUDsLxUtnAOtE6qEHKUgPzl8CNv4uEzmcsSyCM+x
+            +eP6HQKBgQC3bIKcb6AgX9vjLHjeh82s+HIWy9GG+Jcvuyr3GTRwzsyZQ+a2Z/EV
+            yDXXTzfgGm1raO0E2XG/R9M/5kE5THIOf6ghW9wwUVZkx+IRp2+XLRoUd2Gy2dkg
+            ra4JemGEuzsGcyC8mdGLlPoFJYhuFqFGmuxLIfbWqFR6tncOpmru7A==
+      label: main

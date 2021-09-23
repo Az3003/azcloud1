@@ -1,0 +1,25 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: cloud-payment-cn.az.springcloud.alibaba.service
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/payment?characterEncoding=utf8&useSSL=true
+      username: root
+      password: 123
+    type: com.alibaba.druid.pool.DruidDataSource
+  cloud:
+    zookeeper:
+      connect-string: 192.168.1.11:2181
+      discovery:
+        instance-id: payment-cn.az.springcloud.alibaba.service-1
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: cn.az.springcloud.entity
+
+
+

@@ -1,0 +1,30 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    zookeeper:
+      connect-string: 192.168.1.11:2181
+    gateway:
+      routes:
+        - id: payment-route
+#          uri: http://localhost:8001
+          uri: lb://cloud-payment-cn.az.springcloud.alibaba.service # lb:// 固定写法
+          predicates:
+            - Path=/payment/get/**
+
+        - id: feign-order-route
+          uri: http://localhost:80
+          predicates:
+            - Path=/consumer/payment/get/**
+
+        - id: baidu-route
+          uri: http://news.baidu.com
+          predicates:
+            - Path=/**
+
+      discovery:
+        locator:
+          enabled: true # 开启动态路由，利用微服务名路由

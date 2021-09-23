@@ -1,0 +1,17 @@
+server:
+  port: 80
+spring:
+  application:
+    name: cloud-feign-order-cn.az.springcloud.alibaba.service
+  cloud:
+    zookeeper:
+      connect-string: 192.168.1.11:2181
+      discovery:
+        instance-id: feign-order-cn.az.springcloud.alibaba.service
+    service-registry:
+      auto-registration:
+        enabled: off
+logging:
+  level:
+    # feign 日志以什么级别监控哪个接口
+    cn.az.springcloud.service.FeignPaymentService: debug
