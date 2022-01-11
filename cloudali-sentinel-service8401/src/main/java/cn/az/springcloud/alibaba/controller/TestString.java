@@ -9,6 +9,7 @@ public class TestString {
         System.out.println(s);
         System.out.println("master");
         System.out.println("master2");
+        System.out.println("hot-fix");
 
     }
 
