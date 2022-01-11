@@ -6,6 +6,7 @@ public class TestString {
         String s = "ne";
         System.out.println(s);
         System.out.println(s);
+        System.out.println("hot-fix");
 
     }
 
